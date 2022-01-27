@@ -1,0 +1,42 @@
+%ages=('kiran'=>19,'vijay'=>21,'raju'=>20);
+print"OriginalArray:\n";
+print "===========================\n";
+while(($key)=each%ages)
+{
+print"$keyis$ages{$key}yearsold\n";
+}
+$ages{'mayur'}=24;
+print"\nAfteraddingelement:\n";
+print"===========================\n";
+while(($key)=each%ages)
+{
+print"$keyis$ages{$key}yearsold\n";
+}
+delete($ages{'vijay'});
+print"\nAfterdeletingelement:\n";
+print"===========================\n";
+@all_keys=keys(%ages);
+print"Keysare:@all_keys\n";
+@all_values=values(%ages);
+print"Valuesare:@all_values";
+
+o/p:-
+
+c:\perl\bin>perl lab15.pl
+OriginalArray:
+=========================
+raju is 20 years old 
+kiran is 19 years old 
+vijay is 21 years old 
+
+After adding element:
+=========================
+vijay is 21 years old 
+raju is 20 years old 
+mayur is 24 years old 
+kiran is 19 years old
+
+After deletion element:
+=========================
+keys are : raju mayur kiran 
+values are : 20 24 19 
